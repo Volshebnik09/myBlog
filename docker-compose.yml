@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  api:
+    image: yiisoftware/yii2-php:8.1-apache
+    volumes:
+      - ~/api/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./api:/app:delegated
+    ports:
+      - '8000:80'
+
+  db:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD
+      - MYSQL_DATABASE
+      - MYSQL_USER
+      - MYSQL_PASSWORD
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8080:81
+
