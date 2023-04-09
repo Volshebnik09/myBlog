@@ -9,9 +9,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.3.3"
+    "nuxt": "^3.3.3",
+    "nuxt-quasar-ui": "^1.6.0"
   },
   "dependencies": {
-    "@nuxt/webpack-builder": "^3.3.3"
+    "@nuxt/webpack-builder": "^3.3.3",
+    "@quasar/extras": "^1.16.2",
+    "quasar": "^2.11.10"
   }
 }
